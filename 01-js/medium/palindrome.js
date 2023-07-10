@@ -6,8 +6,38 @@
   - `npm run test-palindrome`
 */
 
-function isPalindrome(str) {
-  return true;
+function isPalindrome(number) 
+{
+	// Convert the number to a string
+	const numString = number.toString();
+  
+	// Reverse the string
+	const reversedString = numString.split('').reverse().join('');
+  
+	// Compare the original string with the reversed string
+	if (numString === reversedString) 
+	{
+	  return true; // It is a palindrome
+	} 
+	else 
+	{
+	  return false; // It is not a palindrome
+	}
 }
+  
+// Test the function
+const number = 123213;
 
-module.exports = isPalindrome;
+const result = isPalindrome(number);
+console.log(result);
+
+// if (isPalindrome(number)) 
+// {
+// 	console.log(`${number} is a palindrome.`);
+// } 
+// else 
+// {
+// 	console.log(`${number} is not a palindrome.`);
+// }
+
+// module.exports = isPalindrome;
